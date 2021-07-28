@@ -29,11 +29,7 @@ export default class StarMapScreen extends Component {
         return (
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Text>StarMapScreen</Text>
-                <WebView
-                    scalesPageToFit={true}
-                    source={{ uri: path }}
-                    style={{ marginTop: 20, marginBottom: 20, }}
-                />
+
 
                 <TextInput
                     style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
@@ -54,6 +50,12 @@ export default class StarMapScreen extends Component {
                             longitude: text
                         })
                     }} />
+
+                <WebView
+                    scalesPageToFit={true}
+                    source={{ uri: path }}
+                    style={{ marginTop: 20, marginBottom: 20, }}
+                />
             </View>
         )
     }

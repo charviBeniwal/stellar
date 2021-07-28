@@ -45,13 +45,13 @@ export default class DailyPicScreen extends Component {
             <View style={styles.container}>
                 <SafeAreaView style={styles.droidSafeArea} />
                 <ImageBackground
-                    source={require('../assets/star.background.jpg')} style={styles.backgroundImage}>
+                    source={require('../assets/stars.gif')} style={styles.backgroundImage}>
                     <Text style={styles.routeText}>Astronomy picture of the day</Text>
                     <Text style={styles.titleText}>{this.state.apod.title}</Text>
                     <TouchableOpacity style={styles.listContainer}
                     onPress={()=> Linking.openURL(this.state.apod.url).catch(err => console.error("Could'nt Load Page ", err))}>
                         <View style={styles.iconContainer}>
-                            <Image source={require("../assets/play.video.png")} style={{ width:50, height:50}}></Image>
+                            <Image source={require("../assets/play-video.png")} style={{ width:50, height:50}}></Image>
                         </View>
                     </TouchableOpacity>
                     <Text style={styles.explanationText}>{this.state.apod.explanation}</Text>
